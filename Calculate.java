@@ -16,4 +16,19 @@ class Calculate{
 
     }
 
+    public String catagory(double bmw){
+
+          String category;
+        if (bmw < 18.5) {
+            return category = "Nepietiekama ķermeņa masa";
+        } else if (bmw < 25) {
+            return category = "Normāla ķermeņa masa";
+        } else if (bmw < 30) {
+            return category = "Lieka ķermeņa masa";
+        } else {
+            return category = "Aptaukošanās";
+        }
+
+    }
+
 }

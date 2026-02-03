@@ -55,26 +55,11 @@ public class Main {
             }
         }
 
-
-
-        // ----- Calculation ----------------------------------------------------
-        // double heightM = heightCm / 100.0;                     // convert cm → m
-        // double bmiRaw = weightKg / (heightM * heightM);       // BMI formula
-        // double bmiRounded = Math.round(bmiRaw * 100.0) / 100.0; // two‑decimal rounding
-
+        // ----- Calculate ------------------------------------------------------
         double bmiRounded = calculate.bmwCalc(heightCm,weightKg);
 
         // ----- Category -------------------------------------------------------
-        String category;
-        if (bmiRounded < 18.5) {
-            category = "Nepietiekama ķermeņa masa";
-        } else if (bmiRounded < 25) {
-            category = "Normāla ķermeņa masa";
-        } else if (bmiRounded < 30) {
-            category = "Lieka ķermeņa masa";
-        } else {
-            category = "Aptaukošanās";
-        }
+        String category = calculate.catagory(bmiRounded);
 
         // ----- Output ---------------------------------------------------------
         System.out.println("\nJūsu ĶMI: " + bmiRounded);
