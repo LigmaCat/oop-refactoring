@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Calculate calculate = new Calculate();
+
         final int MIN_HEIGHT_CM = 50;   // 0.5 m
         final int MAX_HEIGHT_CM = 250;  // 2.5 m
         final int MIN_WEIGHT_KG = 10;   // very light
