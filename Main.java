@@ -22,6 +22,7 @@ public class Main {
             System.out.print("Ievadiet augumu centimetros: ");
             if (scanner.hasNextInt()) {
                 heightCm = scanner.nextInt();
+                // calculate.setHeight(heightCm) ;
                 if (heightCm >= MIN_HEIGHT_CM && heightCm <= MAX_HEIGHT_CM) {
                     break;
                 } else {
@@ -40,6 +41,7 @@ public class Main {
             System.out.print("Ievadiet masu kilogramos: ");
             if (scanner.hasNextInt()) {
                 weightKg = scanner.nextInt();
+                // calculate.setWeight(weightKg) ;
                 if (weightKg >= MIN_WEIGHT_KG && weightKg <= MAX_WEIGHT_KG) {
                     break;
                 } else {
@@ -53,10 +55,14 @@ public class Main {
             }
         }
 
+
+
         // ----- Calculation ----------------------------------------------------
-        double heightM = heightCm / 100.0;                     // convert cm → m
-        double bmiRaw = weightKg / (heightM heightM);       // BMI formula
-        double bmiRounded = Math.round(bmiRaw 100.0) / 100.0; // two‑decimal rounding
+        // double heightM = heightCm / 100.0;                     // convert cm → m
+        // double bmiRaw = weightKg / (heightM * heightM);       // BMI formula
+        // double bmiRounded = Math.round(bmiRaw * 100.0) / 100.0; // two‑decimal rounding
+
+        double bmiRounded = calculate.bmwCalc(heightCm,weightKg);
 
         // ----- Category -------------------------------------------------------
         String category;
